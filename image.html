@@ -1,25 +1,68 @@
 <html>
 <head>
-    <title>Doan Truong Xuan - Images</title>
-  </head>
-  <body>
-    <h1>Images</h1>
-    <div id="images">
-      <!-- Javascript code to dynamically add images -->
-    </div>
-    <button onclick="window.location.href='index.html'">Home</button>
-  </body>
-  <script>
-    // Get the images div
-    const imagesDiv = document.getElementById("images");
-    
-    // Loop through all images in the folder
-    for (let i = 1; i <= 6; i++) {
-      // Create an image element for each photo
-      const image = document.createElement("img");
-      image.src = `images/${i}.png`;
-      imagesDiv.appendChild(image);
+  <title>Doan Truong Xuan - Images</title>
+  <style>
+    .photo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-  </script>
-  </html>
+    .title {
+      color: blue;
+      font-weight: bold;
+      margin: 0;
+    }
+    img {
+      width: 50%;
+      height: auto;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Images</h1>
+    <button onclick="window.location.href='index.html'">Home</button>
+    <p>I created this website with the following guidance from ChatGPT.</p>
+    <div id="images">
+        <!-- Javascript code to dynamically add images -->
+    </div>
+</body>
+<script>
+  // Get the images div
+  const imagesDiv = document.getElementById("images");
   
+  // Get the number of images in the folder
+  const numImages = (() => {
+    let count = 0;
+    for (let i = 1; ; i++) {
+      if (fetch(`images/${i}.png`).ok) {
+        count++;
+      } else {
+        break;
+      }
+    }
+    return count;
+  })();
+  
+  // Loop through all images in the folder
+  for (let i = 1; i <= 12; i++) {
+    // Create a div for each photo
+    const photoDiv = document.createElement("div");
+    photoDiv.classList.add("photo");
+    
+    // Create a title for each photo
+    const title = document.createElement("p");
+    title.textContent = `Image ${i}`;
+    title.classList.add("title");
+    photoDiv.appendChild(title);
+    
+    // Create an image element for each photo
+    const image = document.createElement("img");
+    image.src = `images/${i}.png`;
+    image.alt = `Image ${i}`;
+    photoDiv.appendChild(image);
+    
+    imagesDiv.appendChild(photoDiv);
+  }
+</script>
+</html>
