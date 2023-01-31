@@ -1,2 +1,25 @@
-<!-- create image.html, this page shows image from image folder. the photos are named as x.png, x from 1 to 6. the number of photo may increase. make this page be flexible, it can adapt with the increasement.
- -->
+<html>
+<head>
+    <title>Doan Truong Xuan - Images</title>
+  </head>
+  <body>
+    <h1>Images</h1>
+    <div id="images">
+      <!-- Javascript code to dynamically add images -->
+    </div>
+    <button onclick="window.location.href='index.html'">Home</button>
+  </body>
+  <script>
+    // Get the images div
+    const imagesDiv = document.getElementById("images");
+    
+    // Loop through all images in the folder
+    for (let i = 1; i <= 6; i++) {
+      // Create an image element for each photo
+      const image = document.createElement("img");
+      image.src = `images/${i}.png`;
+      imagesDiv.appendChild(image);
+    }
+  </script>
+  </html>
+  
