@@ -1,46 +1,55 @@
-<!-- Adding comments to explain the code blocks -->
 <html>
+  <!-- Adding the viewport meta tag to automatically scale the page in various browsers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <head>
-    <!-- The title of the page, displayed in the browser's tab -->
+    <!-- Page Title -->
     <title>Doan Truong Xuan - Personal Website</title>
-    <!-- Adding a stylesheet to style the avatar -->
+    <!-- Stylesheet for the page -->
     <style>
       /* The avatar style */
       .avatar {
-        /* Displaying the avatar as a circle */
+        /* Add a border-radius of 50% to make the image circular */
         border-radius: 50%;
-        /* Adding a border to the avatar */
+        /* Add a 2px solid #333 border */
         border: 2px solid #333;
-        /* Setting the width and height of the avatar */
-        width: 100px;
-        height: 100px;
+        /* Set the width and height of the image to 150px */
+        width: 150px;
+        height: 150px;
+        /* Display the image as a block */
+        display: block;
+        /* Center the image horizontally */
+        margin: 0 auto;
+      }
+      /* The main heading style */
+      h1 {
+        /* Center the main heading text horizontally */
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <!-- The main heading of the page -->
+    <!-- Main Heading -->
     <h1>Hi, I'm Doan Truong Xuan</h1>
-    <!-- Adding the avatar -->
+    <!-- Avatar Image -->
     <img src="avt/xuan.jpg" alt="Doan Truong Xuan" class="avatar">
-    <!-- A brief introduction about yourself -->
+    <!-- Brief Introduction -->
     <p>I'm an Embedded Software Engineer based in Ho Chi Minh City.</p>
-    <!-- Your experience and interests -->
+    <!-- Description of experience and interests -->
     <p>I have experience in developing software for microcontrollers, IoT devices and have a passion for creating new products that can improve people's lives.</p>
-    <!-- List of your technical skills -->
+    <!-- List of technical skills -->
     <p>My technical skills include:</p>
     <ul>
       <li>Embedded C</li>
-      <li>Python</li> <!-- Adding Python to the list of technical skills -->
+      <li>Python</li>
       <li>AUTOSAR</li>
       <li>PCB Design</li>
     </ul>
-    <!-- Your hobbies and interests -->
+    <!-- Information about hobbies and interests -->
     <p>In my free time, I enjoy exploring new technologies and learning new skills in the field of electronics and software engineering.</p>
-    <!-- A button to navigate to the 'Projects' page -->
+    <!-- Buttons to navigate to other pages -->
     <button onclick="window.location.href='project.html'">Projects</button>
-    <!-- A button to navigate to the 'Images' page with a mouse hover hint -->
     <button onclick="window.location.href='image.html'" title="All the prompts I used to create this website">Images</button>
-    <!-- A note on how this website was created using various prompts -->
+    <!-- Note on how this website was created -->
     <p><em>Note: <br><br>
     This website was created with the help of ChatGPT, a state-of-the-art language model developed by OpenAI. All the prompts to create this website were provided by me, and ChatGPT generated the HTML code accordingly.<br><br>
     - Adding comments to explain the code blocks <br>
@@ -52,8 +61,9 @@
     - Updating the mouse hover hint for the 'Images' button <br>
     - Adding a note on how this website was created <br>
     - Adding a stylesheet to style the avatar <br>
-    - Adding the avatar to the page
-  </em>
-  </p>
+    - Adding the avatar to the page <br>
+    - Centering the avatar and main heading
+    </em>
+    </p>
   </body>
 </html>
