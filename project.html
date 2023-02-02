@@ -1,13 +1,69 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Doan Truong Xuan - Projects</title>
-</head>
-<body>
-  <h1>Projects</h1>
-  <p>Here you can find some of my recent projects:</p>
-  <ul>
-    <!-- Add your project details here -->
-  </ul>
-  <button onclick="window.location.href='index.html'">Home</button>
-</body>
+  <!-- Adding the viewport meta tag to automatically scale the page in various browsers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Page Title -->
+    <title>Doan Truong Xuan - Projects</title>
+    <!-- Stylesheet for the page -->
+    <style>
+      /* Style for the main heading */
+      h1 {
+        /* Center the main heading text horizontally */
+        text-align: center;
+      }
+      /* Style for the project cards */
+      .project-card {
+        /* Set the width and height of the card */
+        width: 50%;
+        height: auto;
+        /* Add some padding to the card */
+        padding: 20px;
+        /* Add a margin to the card to create space between cards */
+        margin: 20px auto;
+        /* Add a 1px solid #333 border */
+        border: 1px solid #333;
+        /* Add a border-radius of 10px to make the corners of the card rounded */
+        border-radius: 10px;
+        /* Center the card horizontally */
+        text-align: center;
+        /* Display the card as a block */
+        display: block;
+      }
+      /* Style for the project images */
+      .project-image {
+        /* Set the width of the image to 100% */
+        width: 100%;
+        /* Display the image as a block */
+        display: block;
+      }
+      /* Style for the project description */
+      .project-description {
+        /* Add some margin to the top of the description to create space between the image and the description */
+        margin-top: 20px;
+        /* Center the description text horizontally */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Heading -->
+    <h1>My Projects</h1>
+    <!-- Project 1 -->
+    <div class="project-card">
+      <!-- Project Image -->
+      <img src="project_image/project1.jpg" alt="Project 1" class="project-image">
+      <!-- Project Description -->
+      <p class="project-description">This is a description of Project 1.</p>
+    </div>
+    <!-- Project 2 -->
+    <div class="project-card">
+      <!-- Project Image -->
+      <img src="project_image/project2.jpg" alt="Project 2" class="project-image">
+      <!-- Project Description -->
+      <p class="project-description">This is a description of Project 2.</p>
+    </div>
+    <!-- Button to navigate to the home page -->
+    <button onclick="window.location.href='index.html'">Home</button>
+  </body>
 </html>
