@@ -1,68 +1,78 @@
 <html>
-<head>
-  <title>Doan Truong Xuan - Images</title>
-  <style>
-    .photo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .title {
-      color: blue;
-      font-weight: bold;
-      margin: 0;
-    }
-    img {
-      width: 50%;
-      height: auto;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-    <h1>Images</h1>
-    <button onclick="window.location.href='index.html'">Home</button>
-    <p>I created this website with the following guidance from ChatGPT.</p>
-    <div id="images">
-        <!-- Javascript code to dynamically add images -->
-    </div>
-</body>
-<script>
-  // Get the images div
-  const imagesDiv = document.getElementById("images");
-  
-  // Get the number of images in the folder
-  const numImages = (() => {
-    let count = 0;
-    for (let i = 1; ; i++) {
-      if (fetch(`images/${i}.png`).ok) {
-        count++;
-      } else {
-        break;
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <style>
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 20px;
       }
-    }
-    return count;
-  })();
-  
-  // Loop through all images in the folder
-  for (let i = 1; i <= 15; i++) {
-    // Create a div for each photo
-    const photoDiv = document.createElement("div");
-    photoDiv.classList.add("photo");
-    
-    // Create a title for each photo
-    const title = document.createElement("p");
-    title.textContent = `Image ${i}`;
-    title.classList.add("title");
-    photoDiv.appendChild(title);
-    
-    // Create an image element for each photo
-    const image = document.createElement("img");
-    image.src = `images/${i}.png`;
-    image.alt = `Image ${i}`;
-    photoDiv.appendChild(image);
-    
-    imagesDiv.appendChild(photoDiv);
-  }
-</script>
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 40px;
+        text-shadow: 2px 2px #333;
+      }
+      .images-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .image-item {
+        width: 30%;
+        margin: 10px;
+        text-align: center;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        box-shadow: 2px 2px #333;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+      }
+      .filename {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="window.location.href='index.html'">Home</button>
+    <h1>Images</h1>
+    <div class="images-container">
+    </div>
+    <script>
+      const imagesContainer = document.querySelector('.images-container');
+      const request = new XMLHttpRequest();
+      request.open('GET', 'https://api.github.com/repos/dtrxuan/ezpage/contents/images');
+      request.send();
+      request.onload = function() {
+        const data = JSON.parse(request.response);
+        const sortedData = data.sort((a, b) => {
+          const aName = a.name.split('.')[0];
+          const bName = b.name.split('.')[0];
+          return aName - bName;
+        });
+        sortedData.forEach(image => {
+          const img = document.createElement('img');
+          img.src = image.download_url;
+          const div = document.createElement('div');
+          div.classList.add('image-item');
+          div.appendChild(img);
+          const filename = document.createElement('p');
+          filename.classList.add('filename');
+          filename.textContent = image.name;
+          div.appendChild(filename);
+          imagesContainer.appendChild(div);
+        });
+      }
+    </script>
+  </body>
 </html>
