@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Message Board</title>
+  </head>
+  <body>
+    <!-- Button to navigate to the home page -->
+    <button onclick="window.location.href='index.html'">Home</button>
+    <header>
+      <h1>Ask me anything! your user name is invisible.</h1>
+    </header>
+    <main>
+      <section id="message-form">
+        <form>
+          <div>
+            <label for="user-input">Username:</label>
+            <input type="text" id="user-input" />
+          </div>
+          <div>
+            <label for="message-input">Message:</label>
+            <textarea id="message-input"></textarea>
+          </div>
+          <button id="add-message-button">Add Message</button>
+        </form>
+      </section>
+      <section id="message-board">
+        <ul id="message-list">
+          <!-- Messages will be added here -->
+        </ul>
+      </section>
+    </main>
+    <script src="message.js"></script>
+  </body>
+</html>
