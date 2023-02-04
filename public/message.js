@@ -1,14 +1,14 @@
 // Initialize Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyDec-8CDh3qR--Edc3qQRoWezOe_1Chkbs",
-    authDomain: "personal-web-85216.firebaseapp.com",
-    databaseURL: "https://personal-web-85216-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "personal-web-85216",
-    storageBucket: "personal-web-85216.appspot.com",
-    messagingSenderId: "378523372936",
-    appId: "1:378523372936:web:703797af9bdda4f2df3e3d",
-    measurementId: "G-JSZMB8JS6M"
-  };
+  apiKey: "AIzaSyBCS7sYZx6navsEUg1hfwz8jI9sQk_oYCE",
+  authDomain: "dtrxuan.firebaseapp.com",
+  databaseURL: "https://dtrxuan-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "dtrxuan",
+  storageBucket: "dtrxuan.appspot.com",
+  messagingSenderId: "206959232405",
+  appId: "1:206959232405:web:7c90ca0d831776dbd3e29c"
+};
+
   firebase.initializeApp(firebaseConfig);
   
   const database = firebase.database();

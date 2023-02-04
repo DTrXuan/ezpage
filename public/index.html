@@ -1,7 +1,27 @@
+<!DOCTYPE html>
 <html>
-  <!-- Adding the viewport meta tag to automatically scale the page in various browsers -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.17.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    
     <!-- Page Title -->
     <title>Doan Truong Xuan - Personal Website</title>
     <!-- Stylesheet for the page -->
@@ -28,15 +48,13 @@
       /* The button style */
       button {
         /* Set the button width to 200px */
-        width: auto;
+        width: 200px;
         /* Set the button height to 50px */
-        height: 2%;
+        height: 50px;
         /* Add a margin of 20px to the top and bottom of the button */
-        margin: auto 0;
+        margin: 20px 0;
         /* Center the button horizontally */
-        display: flex;
-
-        padding: 2%;
+        display: block;
         margin: 0 auto;
         /* Add a background color of #333 */
         background-color: #333;
@@ -88,9 +106,9 @@
     <div style="display: flex; justify-content: center">
       <button
         style="
-          font-size: flex;
-          text-align: center;
-          margin: 5px;
+          font-size: 20px;
+          padding: 15px 30px;
+          margin: 10px;
           border-radius: 5px;
         "
         onclick="window.location.href='message.html'"
@@ -98,10 +116,10 @@
         Ask me!
       </button>
       <button
-        style="
-          font-size: flex;
-          text-align: center;
-          margin: 5px;
+      style="
+          font-size: 20px;
+          padding: 15px 30px;
+          margin: 10px;
           border-radius: 5px;
         "
         onclick="window.location.href='image.html'"
@@ -110,9 +128,9 @@
       </button>
       <button
         style="
-          font-size: flex;
-          text-align: center;
-          margin: 5px;
+          font-size: 20px;
+          padding: 15px 30px;
+          margin: 10px;
           border-radius: 5px;
         "
         onclick="window.location.href='prompt.html'"
@@ -122,9 +140,9 @@
       </button>
       <button
         style="
-          font-size: flex;
-          text-align: center;
-          margin: 5px;
+          font-size: 20px;
+          padding: 15px 30px;
+          margin: 10px;
           border-radius: 5px;
         "
         onclick="window.location.href='project.html'"

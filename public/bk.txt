@@ -1,0 +1,144 @@
+<html>
+  <!-- Adding the viewport meta tag to automatically scale the page in various browsers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <!-- Page Title -->
+    <title>Doan Truong Xuan - Personal Website</title>
+    <!-- Stylesheet for the page -->
+    <style>
+      /* The avatar style */
+      .avatar {
+        /* Add a border-radius of 50% to make the image circular */
+        border-radius: 50%;
+        /* Add a 2px solid #333 border */
+        border: 2px solid #333;
+        /* Set the width and height of the image to 150px */
+        width: 150px;
+        height: 150px;
+        /* Display the image as a block */
+        display: block;
+        /* Center the image horizontally */
+        margin: 0 auto;
+      }
+      /* The main heading style */
+      h1 {
+        /* Center the main heading text horizontally */
+        text-align: center;
+      }
+      /* The button style */
+      button {
+        /* Set the button width to 200px */
+        width: 200px;
+        /* Set the button height to 50px */
+        height: 50px;
+        /* Add a margin of 20px to the top and bottom of the button */
+        margin: 20px 0;
+        /* Center the button horizontally */
+        display: block;
+        margin: 0 auto;
+        /* Add a background color of #333 */
+        background-color: #333;
+        /* Add a border-radius of 10px */
+        border-radius: 10px;
+        /* Add a white text color */
+        color: white;
+        /* Add a text-shadow of 1px 1px #333 */
+        text-shadow: 1px 1px #333;
+        /* Add a hover effect to change the background color to #444 */
+        transition: background-color 0.5s;
+      }
+      /* The button hover effect */
+      button:hover {
+        /* Change the background color to #444 */
+        background-color: rgb(76, 255, 159);
+        /* Change the cursor to a pointer */
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Heading -->
+    <h1>Hi, I'm Doan Truong Xuan</h1>
+    <!-- Avatar Image -->
+    <img src="avt/xuan.jpg" alt="Doan Truong Xuan" class="avatar" />
+    <!-- Brief Introduction -->
+    <p>I'm an Embedded Software Engineer based in Ho Chi Minh City.</p>
+    <!-- Description of experience and interests -->
+    <p>
+      I have experience in developing software for microcontrollers, IoT devices
+      and have a passion for creating new products that can improve people's
+      lives.
+    </p>
+    <!-- List of technical skills -->
+    <p>My technical skills include:</p>
+    <ul>
+      <li>Embedded C</li>
+      <li>Python</li>
+      <li>AUTOSAR</li>
+      <li>PCB Design</li>
+    </ul>
+    <!-- Information about hobbies and interests -->
+    <p>
+      In my free time, I enjoy exploring new technologies and learning new
+      skills in the field of electronics and software engineering.
+    </p>
+    <!-- Buttons to navigate to other pages -->
+    <div style="display: flex; justify-content: center">
+      <button
+        style="
+          font-size: 20px;
+          padding: 15px 30px;
+          margin: 10px;
+          border-radius: 5px;
+        "
+        onclick="window.location.href='message.html'"
+      >
+        Ask me!
+      </button>
+      <button
+      style="
+          font-size: 20px;
+          padding: 15px 30px;
+          margin: 10px;
+          border-radius: 5px;
+        "
+        onclick="window.location.href='image.html'"
+      >
+        Images
+      </button>
+      <button
+        style="
+          font-size: 20px;
+          padding: 15px 30px;
+          margin: 10px;
+          border-radius: 5px;
+        "
+        onclick="window.location.href='prompt.html'"
+        title="The prompts that I used to create this website"
+      >
+        Prompts
+      </button>
+      <button
+        style="
+          font-size: 20px;
+          padding: 15px 30px;
+          margin: 10px;
+          border-radius: 5px;
+        "
+        onclick="window.location.href='project.html'"
+      >
+        Projects
+      </button>
+    </div>
+    <!-- Note on how this website was created -->
+    <p style="text-align: center">
+      <em
+        >Note: <br /><br />
+        This website was created with the help of ChatGPT, a state-of-the-art
+        language model developed by OpenAI. All the prompts to create this
+        website were provided by me, and ChatGPT generated the HTML code
+        accordingly.<br /><br />
+      </em>
+    </p>
+  </body>
+</html>
