@@ -40,19 +40,31 @@ const renderMessages = () => {
     snapshot.forEach(function (childSnapshot) {
       const message = childSnapshot.val();
       const messageItem = document.createElement('li');
-      messageItem.innerHTML = `
+        messageItem.innerHTML = `
           <p class="date">${message.date} : <strong>${message.text}</strong></p>
         `;
-      const deleteButton = document.createElement('button');
-      deleteButton.innerHTML = 'Delete';
-      deleteButton.onclick = () => {
-        if (message.author === userInput.value || userInput.value === 'xuansama') {
-          childSnapshot.ref.remove();
-        } else {
-          alert('You are not authorized to delete this message.');
-        }
-      };
-      messageItem.appendChild(deleteButton);
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = 'Delete';
+        deleteButton.style.display = 'none';
+        
+        deleteButton.onclick = () => {
+          if (message.author === userInput.value || userInput.value === 'xuansama') {
+            childSnapshot.ref.remove();
+          } else {
+            alert('You are not authorized to delete this message.');
+          }
+        };
+        
+        messageItem.onclick = () => {
+          if (deleteButton.style.display === 'none') {
+            deleteButton.style.display = 'inline';
+          } else {
+            deleteButton.style.display = 'none';
+          }
+        };
+        
+        messageItem.appendChild(deleteButton);
+
       messageList.appendChild(messageItem);
     });
   });
